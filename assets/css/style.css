@@ -1,3 +1,7 @@
+/*------------------------------------*\
+	#Layout
+\*------------------------------------*/
+
 html {
 	position: relative;
 	min-height: 100%;
@@ -25,6 +29,12 @@ body {
 	color: #fff;
 	margin: 0;
 }
+.container {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
 .main-navigation {
 	margin-top: 35px;
 	float: right;
@@ -43,7 +53,44 @@ body {
 	text-decoration: none;
 	display: block;
 }
-h1,h2,h3,h4,h5,h6 {
+.main-section,
+.aside-section {
+	background: #fff;
+}
+.main-section {
+	width: 650px;
+	float: left;
+}
+.aside-section {
+	width: 270px;
+	float: right;
+}
+.section-content {
+	padding: 40px 30px;
+	border: solid 1px #ddd;
+}
+.site-footer {
+	color: #ccc;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 40px;
+	border-top: solid 8px #4aaaa5;
+	background-color: #666;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+}
+.copyright {
+	padding-top: 40px;
+}
+
+/*------------------------------------*\
+	#Styles
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
 	color: #4aaaa5;
 	line-height: 1;
 	font-weight: bold;
@@ -70,6 +117,11 @@ h6 {
 p {
 	margin-bottom: 15px;
 }
+
+/*------------------------------------*\
+	#Headings
+\*------------------------------------*/
+
 .page-header {
 	padding-bottom: 35px;
 	margin-bottom: 30px;
@@ -80,28 +132,22 @@ p {
 	margin-bottom: 25px;
 	border-bottom: solid 1px #ededed;
 }
-.container {
-	width: 960px;
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
-}
-.main-section,
-.aside-section {
-	background: #fff;
-}
-.main-section {
-	width: 650px;
+
+/*------------------------------------*\
+	#Misc Classes
+\*------------------------------------*/
+
+.img-left {
 	float: left;
+	margin-right: 25px;
+	margin-bottom: 6px;
 }
-.aside-section {
-	width: 270px;
-	float: right;
-}
-.section-content {
-	padding: 40px 30px;
-	border: solid 1px #ddd;
-}
+
+
+/*------------------------------------*\
+	#List
+\*------------------------------------*/
+
 .social-links li {
 	margin-right: 4px;
 	display: inline-block;
@@ -109,24 +155,114 @@ p {
 .social-links li a {
 	display: block;
 }
-.img-left {
-	float: left;
-	margin-right: 25px;
-	margin-bottom: 6px;
-}
-.site-footer {
-	color: #ccc;
-	font-size: 12px;
+
+/*------------------------------------*\
+	#Forms
+\*------------------------------------*/
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
 	text-align: center;
-	margin-top: 40px;
-	border-top: solid 8px #4aaaa5;
-	background-color: #666;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100px;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	border-radius: 4px;
+	color: #333;
+	background-color: #fff;
+	text-shadow: 0 1px 0 #fff;
 }
-.copyright {
-	padding-top: 40px;
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #adadad;
+	background-color: #e0e0e0;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #adadad;
+	background-color: #e0e0e0;
+	background-position: 0 -15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	color: #F3F3F3;
+	vertical-align: middle;
+	border: 2px solid #F3F3F3;
+	background-color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+	color: #111;
+	border-color: #66afe9;
+	outline: 0;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+	padding: 10px 15px;
+	width: 100%;
+}
+
+/*------------------------------------*\
+	#Buttons
+\*------------------------------------*/
+
+.btn {
+	border-radius: 0;
+}
+.btn-transparent {
+	color: #fff;
+	background-color: transparent;
+	border-color: #fff;
+}
+.btn-transparent:hover,
+.btn-transparent:focus  {
+	color: #fff;
+	background-color: #98ca3c;
+	border-color: #000;
+}
+.btn-transparent:active,
+.btn-transparent:active:hover,
+.btn-transparent:active:focus {
+	color: #fff;
+	background-color: transparent;
+	border-color: #fff;
+}
+.btn-success {
+	background-color: #76b54a;
+	border-color: #6AA343;
+}
+.btn-success:hover,
+.btn-success:focus {
+	background-color: #449d44;
+	border-color: #398439;
+}
+.btn-success:active
+.btn-success:active:hover,
+.btn-success:active:focus {
+	background-color: #398439;
+	border-color: #255625;
 }
